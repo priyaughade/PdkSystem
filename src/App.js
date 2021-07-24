@@ -5,15 +5,14 @@ import axios from 'axios';
 import './App.css';
 import { USER_PER_PAGE } from './util/constants';
 
+//creted function app
 function App() {
   const [users , setUsers] = useState([]);
   const [loading ,setLoading] = useState(false);
   const [page , setPage] = useState(1);
   const [totalPages, setTotalPages] =useState(0);
-  // console.log(totalPages)
 
-  // console.log(users)
-
+//Get data from source page
 useEffect(() => {
     const fetchUsers = async () => {
       setLoading(true);
@@ -24,10 +23,11 @@ useEffect(() => {
     };
     fetchUsers();
 }, [])
+//Handle Pages 
 const handleClick =(num) =>{
   setPage(num);
 }
-
+//Display content  
   return (
     <div className="App">
      <h1>Pagination</h1>

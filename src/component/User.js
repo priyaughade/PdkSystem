@@ -1,5 +1,5 @@
 import React from 'react'
-
+//Display Page cntent 
 const User = ( {user}) => {
     // console.log(user)
     return (
